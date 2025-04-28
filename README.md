@@ -77,7 +77,7 @@ ORDER BY  Number_of_active_patients DESC;
 SELECT
     State,
     County,
-    Round(AVG(Number_of_Eligible_MCO_Patients),2) AS Average_Eligible_Patients
+    Round(AVG(Number_of_Eligible_MCO_Patients)) AS Average_Eligible_Patients
 FROM
     managed_care
 WHERE
@@ -98,7 +98,7 @@ ORDER BY
 ```sql
 SELECT
     Service_Category, MCO_Name,
-    AVG(Number_of_active_patients) AS Average_Active_Patients
+   ROUND( AVG(Number_of_active_patients)) AS Average_Active_Patients
 FROM
     managed_care
 WHERE
@@ -110,6 +110,7 @@ GROUP BY
 ORDER BY
     Average_Active_Patients DESC
 LIMIT 10;
+
 ```
 
 
@@ -136,7 +137,7 @@ ORDER BY
 ### 5. How does the number of providers vary across different states and service categories?
 ```sql
 SELECT
-    State, Service_Category, AVG(Number_of_Providers) AS Average_Providers
+    State, Service_Category, ROUND(AVG(Number_of_Providers)) AS Average_Providers
 FROM
     managed_care
 WHERE
@@ -175,7 +176,7 @@ ORDER BY
 ```sql
 SELECT
     MCO_Name,
-    AVG(
+    ROUND(AVG(
         CASE
             WHEN POSITION(':' IN Number_of_Active_Patients_per_Provider) > 0 THEN
                 CASE
@@ -186,7 +187,7 @@ SELECT
                         CAST(SPLIT_PART(Number_of_Active_Patients_per_Provider, ':', 2) AS NUMERIC)
                 END
          END
-    ) AS Average_Patients_Per_Provider_Ratio
+    )) AS Average_Patients_Per_Provider_Ratio
 FROM
     managed_care
 WHERE
@@ -218,7 +219,7 @@ LIMIT 10;
 ```sql
 SELECT
     MCO_Name,
-    AVG(
+    ROUND(AVG(
         CASE
             WHEN POSITION(':' IN Number_of_Active_Patients_per_Provider) > 0 THEN
                 CASE
@@ -229,7 +230,7 @@ SELECT
                         CAST(SPLIT_PART(Number_of_Active_Patients_per_Provider, ':', 2) AS NUMERIC)
                 END
          END
-    ) AS Average_Patients_Per_Provider_Ratio
+    )) AS Average_Patients_Per_Provider_Ratio
 FROM
     managed_care
 WHERE
