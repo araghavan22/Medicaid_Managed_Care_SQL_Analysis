@@ -604,6 +604,31 @@ ORDER BY
 * *Other Tools: Excel *
 
 ## 📈 Results & Insights
+* **Top MCOs by Active Patients:** The Managed Care Organizations (MCOs) with the highest number of active patients identified were:
+    * Nevada: Liberty
+    * Arizona: MercyCare
+    * Michigan: DeltaDental
+    * New Mexico: PresbyterianHP
+* **Top Counties by Active Patients:** The counties with the most active patients were:
+    * Arizona: Maricopa
+    * Michigan: Wayne
+    * Nevada: Clark
+    * New Mexico: Bernalillo
+* **Top Service Categories by Average Active Patients:** On average, Pediatric Dental had the most active patients, followed by Behavioral Health.
+* **Patient Growth Trend (2019-2023):** There was a general increase in the total number of active patients from 2019 to 2023. The year-over-year increases were:
+    * 2019-2020: 2.12%
+    * 2020-2021: 31.61%
+    * 2021-2022: 20.66%
+    * 2022-2023: 26.47%
+    This growth pattern was variable, not strictly linear or exponential.
+* **Top States/Categories by Provider Count:** The highest number of providers were found in:
+    * Arizona: Behavioral Health
+    * Michigan: Pediatric Dental
+    * Nevada: Behavioral Health
+    * New Mexico: Behavioral Health
+* **Patient-Provider Correlation:** For a majority of counties analyzed, a positive correlation exists between the number of active patients and the number of available providers.
+* **Highest Patient-to-Provider Ratios:** Amerigroup and HPOfNevada were identified as the two MCOs with the highest average number of patients per provider.
+* **Services per Patient:** Behavioral Health was the service category with the most services utilized per active patient.
 
 
 ## 🤝 Contributing
