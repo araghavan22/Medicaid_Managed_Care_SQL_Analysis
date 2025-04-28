@@ -77,7 +77,7 @@ ORDER BY  Number_of_active_patients DESC;
 SELECT
     State,
     County,
-    AVG(Number_of_Eligible_MCO_Patients) AS Average_Eligible_Patients
+    Round(AVG(Number_of_Eligible_MCO_Patients),2) AS Average_Eligible_Patients
 FROM
     managed_care
 WHERE
@@ -89,7 +89,7 @@ GROUP BY
     County
 ORDER BY
     State,
-    County;
+    average_eligible_patients DESC;
 ```
 
 
